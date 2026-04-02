@@ -9,21 +9,29 @@ function ReposList({ nomeUsuario }) {
     const [erro, setErro] = useState(false);
 
     useEffect(() => {
+        if (!nomeUsuario) return;
+
+        setEstaCarregando(true);
+        setErro(false);
 
         fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
-            .then(res => res.json())
-            .then(resJson => {
-                setTimeout(() => {
-                    setEstaCarregando(false);
-                    setRepos(resJson);
-
-
-                }, 3000);
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Erro");
+                }
+                return res.json();
+            })
+            .then(data => {
+                setRepos(data);
             })
             .catch(() => {
                 setErro(true);
+                setRepos([]);
+            })
+            .finally(() => {
+                setEstaCarregando(false);
             });
-            
+
     }, [nomeUsuario]);
 
     return (
@@ -31,7 +39,7 @@ function ReposList({ nomeUsuario }) {
             {erro ? (
                 <h3 className={styles.titles}>Usuário não encontrado.</h3>
             ) : (
-                 <h3 className={styles.titles}>Repositórios de {nomeUsuario}:</h3>
+                <h3 className={styles.titles}>Repositórios de {nomeUsuario}:</h3>
             )}
             <br />
             {estaCarregando ? (
