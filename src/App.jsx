@@ -12,7 +12,7 @@ function App() {
   return (
     <>
 
-      <input type="text" className="nomeUsuario" onBlur={(e) => setNomeUsuario(e.target.value)} /> 
+      <input type="text" className="inputNomeUsuario" onBlur={(e) => setNomeUsuario(e.target.value)} /> 
       {nomeUsuario.length > 3 && (
         <>
           <Perfil nomeUsuario={nomeUsuario} />
