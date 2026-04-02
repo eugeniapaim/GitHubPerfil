@@ -1,0 +1,51 @@
+.list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid regba(0, 0, 0, 0.5);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.listItem{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #949494;
+}
+
+.listItemName{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.listItemLanguage{
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.listItemLink{
+    font-size: 0.9rem;
+    color: var(--link-color);
+    text-decoration: none;
+}
+.nomeUsuario {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.titles {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-align: center;
+}

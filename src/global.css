@@ -1,0 +1,12 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #979797;
+    --secondary-color: #3a3a3a;
+    --background-color: #fff128;
+    --link-color: #bbb018;
+}
