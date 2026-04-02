@@ -17,7 +17,8 @@
     gap: 0.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: #000000ad;
+    background-color: #2c2c2c;
+    box-shadow: #000000 0px 10px 15px;
 }
 
 .listItemName{
@@ -39,7 +40,7 @@
     font-family: Arial, sans-serif;
     color: var(--primary-color);
     text-align: center;
-    width: 25%;
+    width: 300px;
     font-size: large;
     padding: 10px;
     margin: 24px;

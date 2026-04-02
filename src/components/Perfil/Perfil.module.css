@@ -4,8 +4,8 @@
     width: 100%;
 }
 
-.header{
-    width: 100%;
+.header {
+    width: 150%;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
