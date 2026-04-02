@@ -1,6 +1,6 @@
 .list{
-    width: 100%;
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     padding: 16px;
@@ -17,12 +17,11 @@
     gap: 0.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: #949494;
+    background-color: #000000ad;
 }
 
 .listItemName{
     font-size: 1.2rem;
-    font-weight: bold;
     color: var(--secondary-color);
 }
 
@@ -33,20 +32,33 @@
 
 .listItemLink{
     font-size: 0.9rem;
-    color: var(--link-color);
+    color: var(--background-color);
     text-decoration: none;
 }
 .inputNomeUsuario {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--secondary-color);
+    font-family: Arial, sans-serif;
+    color: var(--primary-color);
     text-align: center;
-    margin-top: 16px;
+    width: 25%;
+    font-size: large;
+    padding: 10px;
+    margin: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color) 0.4;
+    box-shadow: var(--primary-color) 10px 8px 34px;
 }
 
 .titles {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.tituloNomeUsuario {
+    margin: 16px 0;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: var(--primary-color);
     text-align: center;
 }

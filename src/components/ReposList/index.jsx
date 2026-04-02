@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./ReposList.module.css";
 
 
+
 function ReposList({ nomeUsuario }) {
     const [repos, setRepos] = useState([]);
     const [estaCarregando, setEstaCarregando] = useState(true);
@@ -21,7 +22,7 @@ function ReposList({ nomeUsuario }) {
     }, [nomeUsuario]);
 
     return (
-        <div>
+        <div className="container">
             {estaCarregando ? (
                 <h3 className={styles.titles}>Carregando...</h3>) : (
                 <ul className={styles.list}>
@@ -30,22 +31,21 @@ function ReposList({ nomeUsuario }) {
                     {repos.map(repositorio => {
                         return <li className={styles.listItem} key={repositorio.id}>
                             <div>
-                                <b className={styles.listItemName}>Nome:</b> {repositorio.name} <br />
+                                <p className={styles.listItemName}><b>Nome:</b> {repositorio.name} <br /></p>
                             </div>
                             <div>
-                                <b className={styles.listItemLanguage}>Linguagem:</b> {repositorio.language} <br />
+                                <p className={styles.listItemName}><b>Linguagem:</b> {repositorio.language} <br /></p>
                             </div>
-                            <a href={repositorio.html_url} target="_blank" rel="noopener noreferrer" className={styles.listItemLink}>
-                                Ver no GitHub
-                            </a>
+                            <p className={styles.listItemName}>
+                                <a href={repositorio.html_url} target="_blank" rel="noopener noreferrer" className={styles.listItemLink}>
+                                    Ver no GitHub
+                                </a>
+                            </p>
                         </li>;
                     })
                     }
                 </ul >
-
-
             )
-
             }
         </div>)
 }
