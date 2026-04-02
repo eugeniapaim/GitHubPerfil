@@ -5,7 +5,8 @@
 }
 
 .header {
-    width: 150%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
