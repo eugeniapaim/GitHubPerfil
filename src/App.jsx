@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div className={styles.headerAll}>
+      <div className={styles.container}>
         <h3 className={styles.tituloNomeUsuario}>Nome de usuário GitHub:</h3>
         <input type="text" className={styles.inputNomeUsuario} onBlur={(e) => setNomeUsuario(e.target.value)} placeholder="@" />
       </div>
