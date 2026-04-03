@@ -20,6 +20,7 @@
 .listItem{
     display: flex;
     width: 100%;
+    max-height: 40vh;
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
@@ -30,10 +31,9 @@
 }
 
 .listItem:hover{
-    background-color: #3c3c3c;
+    background-color: var(--secondary-bg);
     box-shadow: #000000 0px 15px 20px;
     transform: translateY(-5px);
-    cursor: pointer;
 }
 
 .listItemName{
@@ -47,6 +47,10 @@
 }
 
 .listItemLink{
+    background-color: var(--primary-color);
+    padding: 8px 8px;
+    margin-top: 24px;
+    border-radius: 10px;
     font-size: 0.9rem;
     color: var(--background-color);
     text-decoration: none;
